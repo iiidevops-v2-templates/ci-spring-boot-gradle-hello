@@ -1,0 +1,6 @@
+{
+  "name": "Java-Spring Boot(Gradle)",
+  "description": "Gradle jdk8 / Spring Boot 2.3.3 / Tomcat jdk11 <a class='el-link el-link--primary' href='https://github.com/iiidevops-templates/java-spring-boot-app-gradle/blob/master/README.md' target='_blank'>Hello 範本說明</a><hr /><ul><li><strong>v2.0</strong>:更新CI自動化腳本</li></ul>",
+  "arguments": [
+  ]
+}
