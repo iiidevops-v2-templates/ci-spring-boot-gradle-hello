@@ -1,6 +1,6 @@
 include:
   - project: 'iiidevops-templates/ci-template'
-    ref: 'v2.1.1'
+    ref: 'v2.1.4'
     file: 'ci/template.gitlab-ci.yml'
 
 stages:
@@ -15,6 +15,7 @@ Test--SonarQube source code scan:
   variables:
     iiidevops: sonarqube
     CHART_TYPE: gradle
+    CHART_GRADLE_TAG: "jdk11"
   only:
     - master
 
