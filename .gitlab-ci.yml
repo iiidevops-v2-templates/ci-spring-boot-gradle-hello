@@ -1,6 +1,6 @@
 include:
 - project: iiidevops-templates/ci-template
-  ref: v2.5.5
+  ref: v2.6.0
   file: ci/template.gitlab-ci.yml
 stages:
 - initial
@@ -12,7 +12,7 @@ Test--SonarQube source code scan:
   variables:
     iiidevops: sonarqube
     CHART_TYPE: gradle
-    CHART_GRADLE_TAG: jdk11
+    CHART_GRADLE_TAG: jdk17
   only:
   - master
 Test--Anchore SBOM source code scan:
