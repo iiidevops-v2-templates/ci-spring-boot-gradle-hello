@@ -65,3 +65,5 @@ https://blog.miniasp.com/post/2021/08/11/Spring-Boot-Maven-JaCoCo-Test-Coverage-
   * `postman`資料夾內是devops整合API測試工具(postman)的自動測試檔案放置目錄，devops系統會以`postman`資料夾內 postman_collection.json 的檔案內容進行自動測試
   * `sideex`資料夾內則是devops整合Web測試工具(sideex)的自動測試檔案放置目錄，devops系統會以`sideex`資料夾內 sideex 匯出的 json 檔案內容進行自動測試
 * `Dockerfile`內加上前置dockerhub，是為使image能透過本地端harbor擔任Image Proxy的方式抓取Docker Hub上的Images，增加不同專案抓取相同 Image 的效率
+
+驗證一下quota是否會出現
