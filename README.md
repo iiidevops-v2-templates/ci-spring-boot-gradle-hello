@@ -4,7 +4,7 @@
 2. 請確認您的版本後，再請更新範本專案內的 Dockerfile 檔案。
 
 ## 如何增加Sonarqube掃描(用預設的QualiyGate)
-在`app/build.gradle`的檔案內plugins新增`id "org.sonarqube" version "3.1.1"`後pipeline即可運行Sonarqube掃描
+在`app/build.gradle`的檔案內plugins新增`id "org.sonarqube" version "7.5.0.8588"`後pipeline即可運行Sonarqube掃描
 1. 確認您專案的 gradle 版本，並將它更新至專案的 Dockerfile
 2. 若欲使用SonarQube，則請將下列文字新增至 build.gradle 的檔案裡。
 ```
@@ -12,7 +12,7 @@ plugins {
 	id 'org.springframework.boot' version '2.3.3.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 	id 'java'
-	id "org.sonarqube" version "3.1.1"
+	id "org.sonarqube" version "7.5.0.8588"
 }
 ```
 2.1 填入位置可參考下列圖示所示
@@ -31,7 +31,7 @@ cd app && chmod -R 777 .
     -Dsonar.projectKey=${CICD_GIT_REPO_NAME} -Dsonar.projectName=${CICD_GIT_REPO_NAME}\
 	-Dsonar.projectVersion=${CICD_GIT_BRANCH}:${CICD_GIT_COMMIT}\
     -Dsonar.log.level=DEBUG -Dsonar.qualitygate.wait=true -Dsonar.qualitygate.timeout=600\
-    -Dsonar.login=$SONAR_TOKEN -x test jacocoTestReport sonarqube
+    -Dsonar.token=$SONAR_TOKEN -x test jacocoTestReport sonar
 ```
 ### jacoco Coverage 參考說明
 https://dzone.com/articles/reporting-code-coverage-using-maven-and-jacoco-plu
